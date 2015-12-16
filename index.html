@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="description" content="Bootstrap Responsive Multi-Purpose Landing Page Template">
@@ -26,8 +26,7 @@
 
 		<!-- OWL-CAROUSEL -->
 		<link rel="stylesheet"  href="assets/owl-carousel/owl.carousel.css">
-		<link rel="stylesheet"  href="assets/owl-carousel/owl-carousel/owl.theme.css">
-
+		<link rel="stylesheet"  href="assets/owl-carousel/owl.theme.css">
 
 		<!-- WODRY TEXT SLIDING  -->
 		<link rel="stylesheet"  href="css/wodry.css">
@@ -64,7 +63,7 @@
 	      After neccessary customization/modification, Please minify HTML/CSS according to http://browserdiet.com/en/ for better performance
 	     **************** -->
 	</head>
-	<body>
+	<body ng-controller="evento as ev">
 		<!-- =========================
 		     PRE-LOADER  AREA     
 		============================== -->
@@ -97,17 +96,17 @@
 	 			<div class="subscribtion-form">
 	 					<div class="subcribtion-inputs">
 	 						<span class="input input--madoka">
-							<input class="input__field input__field--madoka" type="text" id="input-1" />
+							<input class="input__field input__field--madoka" type="text" id="input-1" ng-click="ev.subscribe()" ng-model="ev.people.email" />
 							<label class="input__label input__label--madoka" for="input-1">
 								<svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
 									<path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
 								</svg>
-								<span class="input__label-content input__label-content--madoka">Your E-mail Please...</span>
+								<span class="input__label-content input__label-content--madoka">Digite seu E-mail Por Favor...</span>
 							</label>
 							</span>
 	 					</div> <!-- SUBSCRIBTION INPUTS -->
 	 					<div class="subscribtion-button">
-	 						<a href="#" class="btn-lg standard-button">GIVE ME UPDATE</a>
+	 						<a href="#" class="btn-lg standard-button">MANTANHA-ME ATUALIZADO</a>
 	 					</div>
 
 	 				</div> <!-- SUBSCRIBTION FORM  -->
@@ -573,7 +572,7 @@ launch!</h2>
 	 					<h4>Don't Forget To Subscritbe with Your E-mail</h4>
 	 				</div> <!-- SUBSCRIBTION HEADING -->
 	 				<div class="subscribtion-button col-md-4 col-md-offset-4 col-sm-12">
-	 				<a class="btn-lg standard-button" href="#section-1">SUSCRIBE NOW</a>
+	 				<a class="btn-lg standard-button" href="#section-1"></a>
 	 			</div> <!-- HEADER-BUTTON -->
 	 				
 	 			</div>
@@ -601,6 +600,12 @@ launch!</h2>
 		============================== -->
 		<!-- JQUERY LATEST -->
 		<script src="js/jquery-1.11.2.min.js"></script> <!-- You can use CDN version -->
+        
+        
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="js/module.js"></script>
+        
+        
 
 		<script>
 		/* =================================
@@ -614,6 +619,10 @@ launch!</h2>
 		        // will fade out the whole DIV that covers the website.
 			jQuery(".preloader").delay(1000).fadeOut("slow");
 		})
+        
+        $(document).ready(function(){
+            $('#input-1').mask('(99) 99999-9999');
+        });
 
 		</script>
 

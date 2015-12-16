@@ -585,7 +585,10 @@ h6 {
 .input__field--madoka {
   width: 100%;
   background: transparent;
-  color: #ffffff;
+  color: transparent;
+}
+.input__field--madoka:focus {
+    color: #ffffff;
 }
 
 .input__label--madoka {
