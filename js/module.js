@@ -62,7 +62,15 @@
         }
         
         function subscribe(){
-            
+            var msg;
+            if(!_validate('subscribe')){
+                msg = "Inscrição não realizada!"
+                window.alert(msg);
+                return false;
+            }
+            msg = "Inscrição realizada com sucesso!";
+            window.alert(msg);
+            return true;
         }
     }
     
