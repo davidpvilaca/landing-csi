@@ -226,7 +226,7 @@ li {
 }
 
 .color-overlay {
-  background: rgba(0, 0, 0, 0.69) none repeat scroll 0 0;
+      background: rgba(121, 119, 119, 0.69) none repeat scroll 0 0;
 }
 .standard-button:hover, .standard-button:active, .standard-button:focus{
 	text-decoration: none;
